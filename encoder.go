@@ -10,6 +10,11 @@ func NewEncoder(buffer []byte) Encoder {
 	}
 }
 
+// check whether any errors have occurred
+func (e *Encoder) CheckError() error {
+	return e.reader.CheckError()
+}
+
 // cbor ok
 func (e *Encoder) WriteNil() {
 	_ = e.reader.SetUint8(TypeNull)

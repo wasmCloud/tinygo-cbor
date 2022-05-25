@@ -18,4 +18,5 @@ type Writer interface {
 	WriteByteArray(value []byte)
 	WriteArraySize(length uint32)
 	WriteMapSize(length uint32)
+	CheckError() error
 }

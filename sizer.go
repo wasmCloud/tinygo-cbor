@@ -8,6 +8,11 @@ func NewSizer() Sizer {
 	return Sizer{}
 }
 
+// check whether any errors have occurred
+func (s *Sizer) CheckError() error {
+	return nil
+}
+
 func (s *Sizer) Len() uint32 {
 	return s.length
 }
